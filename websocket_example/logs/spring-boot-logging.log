@@ -1,0 +1,286 @@
+2019-10-28 00:31:50.424 [restartedMain] INFO  c.e.WebsocketExampleApplication - Starting WebsocketExampleApplication on carrey with PID 18336 (C:\development\projects\websocket_example\bin\main started by 조하명 in C:\development\projects\websocket_example)
+2019-10-28 00:31:50.428 [restartedMain] INFO  c.e.WebsocketExampleApplication - No active profile set, falling back to default profiles: default
+2019-10-28 00:31:50.476 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2019-10-28 00:31:50.478 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2019-10-28 00:31:51.426 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2019-10-28 00:31:51.433 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2019-10-28 00:31:51.434 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2019-10-28 00:31:51.434 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.27]
+2019-10-28 00:31:51.534 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2019-10-28 00:31:51.535 [restartedMain] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 1057 ms
+2019-10-28 00:31:51.648 [restartedMain] INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'clientInboundChannelExecutor'
+2019-10-28 00:31:51.651 [restartedMain] INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'clientOutboundChannelExecutor'
+2019-10-28 00:31:51.657 [restartedMain] INFO  o.s.s.c.ThreadPoolTaskScheduler - Initializing ExecutorService 'messageBrokerTaskScheduler'
+2019-10-28 00:31:51.684 [restartedMain] INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'brokerChannelExecutor'
+2019-10-28 00:31:51.860 [restartedMain] INFO  o.s.b.a.w.s.WelcomePageHandlerMapping - Adding welcome page: class path resource [static/index.html]
+2019-10-28 00:31:52.172 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2019-10-28 00:31:52.185 [restartedMain] INFO  o.s.m.s.b.SimpleBrokerMessageHandler - Starting...
+2019-10-28 00:31:52.185 [restartedMain] INFO  o.s.m.s.b.SimpleBrokerMessageHandler - BrokerAvailabilityEvent[available=true, SimpleBrokerMessageHandler [DefaultSubscriptionRegistry[cache[0 destination(s)], registry[0 sessions]]]]
+2019-10-28 00:31:52.186 [restartedMain] INFO  o.s.m.s.b.SimpleBrokerMessageHandler - Started.
+2019-10-28 00:31:52.194 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2019-10-28 00:31:52.214 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2019-10-28 00:31:52.216 [restartedMain] INFO  c.e.WebsocketExampleApplication - Started WebsocketExampleApplication in 2.304 seconds (JVM running for 4.832)
+2019-10-28 00:32:02.257 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-10-28 00:32:02.257 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2019-10-28 00:32:02.262 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 4 ms
+2019-10-28 00:32:51.682 [MessageBroker-1] INFO  o.s.w.s.c.WebSocketMessageBrokerStats - WebSocketSession[0 current WS(0)-HttpStream(0)-HttpPoll(0), 0 total, 0 closed abnormally (0 connect failure, 0 send limit, 0 transport error)], stompSubProtocol[processed CONNECT(0)-CONNECTED(0)-DISCONNECT(0)], stompBrokerRelay[null], inboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], outboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], sockJsScheduler[pool size = 1, active threads = 1, queued tasks = 0, completed tasks = 0]
+2019-10-28 00:40:54.150 [Thread-8] INFO  o.s.m.s.b.SimpleBrokerMessageHandler - Stopping...
+2019-10-28 00:40:54.151 [Thread-8] INFO  o.s.m.s.b.SimpleBrokerMessageHandler - BrokerAvailabilityEvent[available=false, SimpleBrokerMessageHandler [DefaultSubscriptionRegistry[cache[0 destination(s)], registry[0 sessions]]]]
+2019-10-28 00:40:54.152 [Thread-8] INFO  o.s.m.s.b.SimpleBrokerMessageHandler - Stopped.
+2019-10-28 00:40:54.152 [Thread-8] INFO  o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'brokerChannelExecutor'
+2019-10-28 00:40:54.153 [Thread-8] INFO  o.s.s.c.ThreadPoolTaskScheduler - Shutting down ExecutorService 'messageBrokerTaskScheduler'
+2019-10-28 00:40:54.153 [Thread-8] INFO  o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'clientOutboundChannelExecutor'
+2019-10-28 00:40:54.154 [Thread-8] INFO  o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'clientInboundChannelExecutor'
+2019-10-28 00:40:55.725 [restartedMain] INFO  c.e.WebsocketExampleApplication - Starting WebsocketExampleApplication on carrey with PID 18336 (C:\development\projects\websocket_example\bin\main started by 조하명 in C:\development\projects\websocket_example)
+2019-10-28 00:40:55.726 [restartedMain] INFO  c.e.WebsocketExampleApplication - No active profile set, falling back to default profiles: default
+2019-10-28 00:40:55.962 [restartedMain] WARN  o.a.tomcat.util.modeler.Registry - The MBean registry cannot be disabled because it has already been initialised
+2019-10-28 00:40:56.020 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2019-10-28 00:40:56.020 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2019-10-28 00:40:56.021 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2019-10-28 00:40:56.021 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.27]
+2019-10-28 00:40:56.051 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2019-10-28 00:40:56.051 [restartedMain] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 321 ms
+2019-10-28 00:40:56.070 [restartedMain] INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'clientInboundChannelExecutor'
+2019-10-28 00:40:56.071 [restartedMain] INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'clientOutboundChannelExecutor'
+2019-10-28 00:40:56.072 [restartedMain] INFO  o.s.s.c.ThreadPoolTaskScheduler - Initializing ExecutorService 'messageBrokerTaskScheduler'
+2019-10-28 00:40:56.075 [restartedMain] INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'brokerChannelExecutor'
+2019-10-28 00:40:56.314 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2019-10-28 00:40:56.320 [restartedMain] INFO  o.s.m.s.b.SimpleBrokerMessageHandler - Starting...
+2019-10-28 00:40:56.320 [restartedMain] INFO  o.s.m.s.b.SimpleBrokerMessageHandler - BrokerAvailabilityEvent[available=true, SimpleBrokerMessageHandler [DefaultSubscriptionRegistry[cache[0 destination(s)], registry[0 sessions]]]]
+2019-10-28 00:40:56.320 [restartedMain] INFO  o.s.m.s.b.SimpleBrokerMessageHandler - Started.
+2019-10-28 00:40:56.323 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2019-10-28 00:40:56.326 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2019-10-28 00:40:56.327 [restartedMain] INFO  c.e.WebsocketExampleApplication - Started WebsocketExampleApplication in 0.654 seconds (JVM running for 548.943)
+2019-10-28 00:40:56.329 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2019-10-28 00:40:59.537 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-10-28 00:40:59.540 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2019-10-28 00:40:59.561 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 21 ms
+2019-10-28 00:40:59.563 [http-nio-8080-exec-1] WARN  o.s.web.servlet.PageNotFound - No mapping for GET /
+2019-10-28 00:40:59.709 [http-nio-8080-exec-2] WARN  o.s.web.servlet.PageNotFound - No mapping for GET /favicon.ico
+2019-10-28 00:41:02.830 [http-nio-8080-exec-3] WARN  o.s.web.servlet.PageNotFound - No mapping for GET /
+2019-10-28 00:41:56.076 [MessageBroker-1] INFO  o.s.w.s.c.WebSocketMessageBrokerStats - WebSocketSession[0 current WS(0)-HttpStream(0)-HttpPoll(0), 0 total, 0 closed abnormally (0 connect failure, 0 send limit, 0 transport error)], stompSubProtocol[processed CONNECT(0)-CONNECTED(0)-DISCONNECT(0)], stompBrokerRelay[null], inboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], outboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], sockJsScheduler[pool size = 1, active threads = 1, queued tasks = 0, completed tasks = 0]
+2019-10-28 00:42:10.638 [RMI TCP Connection(14)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+2019-10-28 00:42:10.640 [RMI TCP Connection(14)-127.0.0.1] INFO  o.s.m.s.b.SimpleBrokerMessageHandler - Stopping...
+2019-10-28 00:42:10.641 [RMI TCP Connection(14)-127.0.0.1] INFO  o.s.m.s.b.SimpleBrokerMessageHandler - BrokerAvailabilityEvent[available=false, SimpleBrokerMessageHandler [DefaultSubscriptionRegistry[cache[0 destination(s)], registry[0 sessions]]]]
+2019-10-28 00:42:10.641 [RMI TCP Connection(14)-127.0.0.1] INFO  o.s.m.s.b.SimpleBrokerMessageHandler - Stopped.
+2019-10-28 00:42:10.642 [RMI TCP Connection(14)-127.0.0.1] INFO  o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'brokerChannelExecutor'
+2019-10-28 00:42:10.643 [RMI TCP Connection(14)-127.0.0.1] INFO  o.s.s.c.ThreadPoolTaskScheduler - Shutting down ExecutorService 'messageBrokerTaskScheduler'
+2019-10-28 00:42:10.643 [RMI TCP Connection(14)-127.0.0.1] INFO  o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'clientOutboundChannelExecutor'
+2019-10-28 00:42:10.643 [RMI TCP Connection(14)-127.0.0.1] INFO  o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'clientInboundChannelExecutor'
+2019-10-28 00:42:17.945 [restartedMain] INFO  c.e.WebsocketExampleApplication - Starting WebsocketExampleApplication on carrey with PID 25584 (C:\development\projects\websocket_example\bin\main started by 조하명 in C:\development\projects\websocket_example)
+2019-10-28 00:42:17.952 [restartedMain] INFO  c.e.WebsocketExampleApplication - No active profile set, falling back to default profiles: default
+2019-10-28 00:42:18.015 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2019-10-28 00:42:18.016 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2019-10-28 00:42:19.218 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2019-10-28 00:42:19.228 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2019-10-28 00:42:19.229 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2019-10-28 00:42:19.229 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.27]
+2019-10-28 00:42:19.341 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2019-10-28 00:42:19.341 [restartedMain] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 1325 ms
+2019-10-28 00:42:19.460 [restartedMain] INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'clientInboundChannelExecutor'
+2019-10-28 00:42:19.463 [restartedMain] INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'clientOutboundChannelExecutor'
+2019-10-28 00:42:19.468 [restartedMain] INFO  o.s.s.c.ThreadPoolTaskScheduler - Initializing ExecutorService 'messageBrokerTaskScheduler'
+2019-10-28 00:42:19.498 [restartedMain] INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'brokerChannelExecutor'
+2019-10-28 00:42:20.144 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2019-10-28 00:42:20.158 [restartedMain] INFO  o.s.m.s.b.SimpleBrokerMessageHandler - Starting...
+2019-10-28 00:42:20.159 [restartedMain] INFO  o.s.m.s.b.SimpleBrokerMessageHandler - BrokerAvailabilityEvent[available=true, SimpleBrokerMessageHandler [DefaultSubscriptionRegistry[cache[0 destination(s)], registry[0 sessions]]]]
+2019-10-28 00:42:20.160 [restartedMain] INFO  o.s.m.s.b.SimpleBrokerMessageHandler - Started.
+2019-10-28 00:42:20.166 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2019-10-28 00:42:20.204 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2019-10-28 00:42:20.208 [restartedMain] INFO  c.e.WebsocketExampleApplication - Started WebsocketExampleApplication in 3.148 seconds (JVM running for 5.917)
+2019-10-28 00:42:25.278 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-10-28 00:42:25.279 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2019-10-28 00:42:25.283 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 4 ms
+2019-10-28 00:42:25.299 [http-nio-8080-exec-1] WARN  o.s.web.servlet.PageNotFound - No mapping for GET /
+2019-10-28 00:42:25.405 [http-nio-8080-exec-2] WARN  o.s.web.servlet.PageNotFound - No mapping for GET /favicon.ico
+2019-10-28 00:42:46.335 [http-nio-8080-exec-4] WARN  o.s.web.servlet.PageNotFound - No mapping for GET /hello
+2019-10-28 00:43:08.201 [http-nio-8080-exec-6] WARN  o.s.web.servlet.PageNotFound - No mapping for GET /
+2019-10-28 00:43:08.865 [http-nio-8080-exec-7] WARN  o.s.web.servlet.PageNotFound - No mapping for GET /favicon.ico
+2019-10-28 00:43:19.497 [MessageBroker-1] INFO  o.s.w.s.c.WebSocketMessageBrokerStats - WebSocketSession[0 current WS(0)-HttpStream(0)-HttpPoll(0), 0 total, 0 closed abnormally (0 connect failure, 0 send limit, 0 transport error)], stompSubProtocol[processed CONNECT(0)-CONNECTED(0)-DISCONNECT(0)], stompBrokerRelay[null], inboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], outboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], sockJsScheduler[pool size = 1, active threads = 1, queued tasks = 0, completed tasks = 0]
+2019-10-28 00:44:18.655 [Thread-8] INFO  o.s.m.s.b.SimpleBrokerMessageHandler - Stopping...
+2019-10-28 00:44:18.656 [Thread-8] INFO  o.s.m.s.b.SimpleBrokerMessageHandler - BrokerAvailabilityEvent[available=false, SimpleBrokerMessageHandler [DefaultSubscriptionRegistry[cache[0 destination(s)], registry[0 sessions]]]]
+2019-10-28 00:44:18.656 [Thread-8] INFO  o.s.m.s.b.SimpleBrokerMessageHandler - Stopped.
+2019-10-28 00:44:18.658 [Thread-8] INFO  o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'brokerChannelExecutor'
+2019-10-28 00:44:18.659 [Thread-8] INFO  o.s.s.c.ThreadPoolTaskScheduler - Shutting down ExecutorService 'messageBrokerTaskScheduler'
+2019-10-28 00:44:18.659 [Thread-8] INFO  o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'clientOutboundChannelExecutor'
+2019-10-28 00:44:18.660 [Thread-8] INFO  o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'clientInboundChannelExecutor'
+2019-10-28 00:44:20.429 [restartedMain] INFO  c.e.WebsocketExampleApplication - Starting WebsocketExampleApplication on carrey with PID 25584 (C:\development\projects\websocket_example\bin\main started by 조하명 in C:\development\projects\websocket_example)
+2019-10-28 00:44:20.429 [restartedMain] INFO  c.e.WebsocketExampleApplication - No active profile set, falling back to default profiles: default
+2019-10-28 00:44:20.676 [restartedMain] WARN  o.a.tomcat.util.modeler.Registry - The MBean registry cannot be disabled because it has already been initialised
+2019-10-28 00:44:20.730 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2019-10-28 00:44:20.731 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2019-10-28 00:44:20.732 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2019-10-28 00:44:20.732 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.27]
+2019-10-28 00:44:20.763 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2019-10-28 00:44:20.763 [restartedMain] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 329 ms
+2019-10-28 00:44:20.782 [restartedMain] INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'clientInboundChannelExecutor'
+2019-10-28 00:44:20.783 [restartedMain] INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'clientOutboundChannelExecutor'
+2019-10-28 00:44:20.784 [restartedMain] INFO  o.s.s.c.ThreadPoolTaskScheduler - Initializing ExecutorService 'messageBrokerTaskScheduler'
+2019-10-28 00:44:20.787 [restartedMain] INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'brokerChannelExecutor'
+2019-10-28 00:44:20.836 [restartedMain] INFO  o.s.b.a.w.s.WelcomePageHandlerMapping - Adding welcome page: class path resource [static/index.html]
+2019-10-28 00:44:21.058 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2019-10-28 00:44:21.064 [restartedMain] INFO  o.s.m.s.b.SimpleBrokerMessageHandler - Starting...
+2019-10-28 00:44:21.064 [restartedMain] INFO  o.s.m.s.b.SimpleBrokerMessageHandler - BrokerAvailabilityEvent[available=true, SimpleBrokerMessageHandler [DefaultSubscriptionRegistry[cache[0 destination(s)], registry[0 sessions]]]]
+2019-10-28 00:44:21.064 [restartedMain] INFO  o.s.m.s.b.SimpleBrokerMessageHandler - Started.
+2019-10-28 00:44:21.067 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2019-10-28 00:44:21.070 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2019-10-28 00:44:21.071 [restartedMain] INFO  c.e.WebsocketExampleApplication - Started WebsocketExampleApplication in 0.707 seconds (JVM running for 126.779)
+2019-10-28 00:44:21.072 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2019-10-28 00:44:22.164 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-10-28 00:44:22.166 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2019-10-28 00:44:22.179 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 12 ms
+2019-10-28 00:45:20.787 [MessageBroker-1] INFO  o.s.w.s.c.WebSocketMessageBrokerStats - WebSocketSession[0 current WS(0)-HttpStream(0)-HttpPoll(0), 0 total, 0 closed abnormally (0 connect failure, 0 send limit, 0 transport error)], stompSubProtocol[processed CONNECT(0)-CONNECTED(0)-DISCONNECT(0)], stompBrokerRelay[null], inboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], outboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], sockJsScheduler[pool size = 1, active threads = 1, queued tasks = 0, completed tasks = 0]
+2019-10-28 00:53:38.684 [Thread-11] INFO  o.s.m.s.b.SimpleBrokerMessageHandler - Stopping...
+2019-10-28 00:53:38.685 [Thread-11] INFO  o.s.m.s.b.SimpleBrokerMessageHandler - BrokerAvailabilityEvent[available=false, SimpleBrokerMessageHandler [DefaultSubscriptionRegistry[cache[0 destination(s)], registry[0 sessions]]]]
+2019-10-28 00:53:38.685 [Thread-11] INFO  o.s.m.s.b.SimpleBrokerMessageHandler - Stopped.
+2019-10-28 00:53:38.686 [Thread-11] INFO  o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'brokerChannelExecutor'
+2019-10-28 00:53:38.686 [Thread-11] INFO  o.s.s.c.ThreadPoolTaskScheduler - Shutting down ExecutorService 'messageBrokerTaskScheduler'
+2019-10-28 00:53:38.687 [Thread-11] INFO  o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'clientOutboundChannelExecutor'
+2019-10-28 00:53:38.688 [Thread-11] INFO  o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'clientInboundChannelExecutor'
+2019-10-28 00:53:40.366 [restartedMain] INFO  c.e.WebsocketExampleApplication - Starting WebsocketExampleApplication on carrey with PID 25584 (C:\development\projects\websocket_example\bin\main started by 조하명 in C:\development\projects\websocket_example)
+2019-10-28 00:53:40.367 [restartedMain] INFO  c.e.WebsocketExampleApplication - No active profile set, falling back to default profiles: default
+2019-10-28 00:53:40.587 [restartedMain] WARN  o.a.tomcat.util.modeler.Registry - The MBean registry cannot be disabled because it has already been initialised
+2019-10-28 00:53:40.636 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2019-10-28 00:53:40.637 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2019-10-28 00:53:40.637 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2019-10-28 00:53:40.637 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.27]
+2019-10-28 00:53:40.668 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2019-10-28 00:53:40.668 [restartedMain] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 298 ms
+2019-10-28 00:53:40.682 [restartedMain] INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'clientInboundChannelExecutor'
+2019-10-28 00:53:40.683 [restartedMain] INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'clientOutboundChannelExecutor'
+2019-10-28 00:53:40.684 [restartedMain] INFO  o.s.s.c.ThreadPoolTaskScheduler - Initializing ExecutorService 'messageBrokerTaskScheduler'
+2019-10-28 00:53:40.687 [restartedMain] INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'brokerChannelExecutor'
+2019-10-28 00:53:40.726 [restartedMain] INFO  o.s.b.a.w.s.WelcomePageHandlerMapping - Adding welcome page: class path resource [static/index.html]
+2019-10-28 00:53:40.884 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2019-10-28 00:53:40.889 [restartedMain] INFO  o.s.m.s.b.SimpleBrokerMessageHandler - Starting...
+2019-10-28 00:53:40.889 [restartedMain] INFO  o.s.m.s.b.SimpleBrokerMessageHandler - BrokerAvailabilityEvent[available=true, SimpleBrokerMessageHandler [DefaultSubscriptionRegistry[cache[0 destination(s)], registry[0 sessions]]]]
+2019-10-28 00:53:40.889 [restartedMain] INFO  o.s.m.s.b.SimpleBrokerMessageHandler - Started.
+2019-10-28 00:53:40.892 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2019-10-28 00:53:40.895 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2019-10-28 00:53:40.895 [restartedMain] INFO  c.e.WebsocketExampleApplication - Started WebsocketExampleApplication in 0.579 seconds (JVM running for 686.604)
+2019-10-28 00:53:40.896 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2019-10-28 00:54:33.741 [Thread-17] INFO  o.s.m.s.b.SimpleBrokerMessageHandler - Stopping...
+2019-10-28 00:54:33.743 [Thread-17] INFO  o.s.m.s.b.SimpleBrokerMessageHandler - BrokerAvailabilityEvent[available=false, SimpleBrokerMessageHandler [DefaultSubscriptionRegistry[cache[0 destination(s)], registry[0 sessions]]]]
+2019-10-28 00:54:33.743 [Thread-17] INFO  o.s.m.s.b.SimpleBrokerMessageHandler - Stopped.
+2019-10-28 00:54:33.744 [Thread-17] INFO  o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'brokerChannelExecutor'
+2019-10-28 00:54:33.745 [Thread-17] INFO  o.s.s.c.ThreadPoolTaskScheduler - Shutting down ExecutorService 'messageBrokerTaskScheduler'
+2019-10-28 00:54:33.745 [Thread-17] INFO  o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'clientOutboundChannelExecutor'
+2019-10-28 00:54:33.745 [Thread-17] INFO  o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'clientInboundChannelExecutor'
+2019-10-28 00:54:35.384 [restartedMain] INFO  c.e.WebsocketExampleApplication - Starting WebsocketExampleApplication on carrey with PID 25584 (C:\development\projects\websocket_example\bin\main started by 조하명 in C:\development\projects\websocket_example)
+2019-10-28 00:54:35.385 [restartedMain] INFO  c.e.WebsocketExampleApplication - No active profile set, falling back to default profiles: default
+2019-10-28 00:54:35.677 [restartedMain] WARN  o.a.tomcat.util.modeler.Registry - The MBean registry cannot be disabled because it has already been initialised
+2019-10-28 00:54:35.742 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2019-10-28 00:54:35.743 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2019-10-28 00:54:35.743 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2019-10-28 00:54:35.743 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.27]
+2019-10-28 00:54:35.776 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2019-10-28 00:54:35.776 [restartedMain] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 386 ms
+2019-10-28 00:54:35.792 [restartedMain] INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'clientInboundChannelExecutor'
+2019-10-28 00:54:35.793 [restartedMain] INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'clientOutboundChannelExecutor'
+2019-10-28 00:54:35.794 [restartedMain] INFO  o.s.s.c.ThreadPoolTaskScheduler - Initializing ExecutorService 'messageBrokerTaskScheduler'
+2019-10-28 00:54:35.797 [restartedMain] INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'brokerChannelExecutor'
+2019-10-28 00:54:35.838 [restartedMain] INFO  o.s.b.a.w.s.WelcomePageHandlerMapping - Adding welcome page: class path resource [static/index.html]
+2019-10-28 00:54:36.000 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2019-10-28 00:54:36.005 [restartedMain] INFO  o.s.m.s.b.SimpleBrokerMessageHandler - Starting...
+2019-10-28 00:54:36.005 [restartedMain] INFO  o.s.m.s.b.SimpleBrokerMessageHandler - BrokerAvailabilityEvent[available=true, SimpleBrokerMessageHandler [DefaultSubscriptionRegistry[cache[0 destination(s)], registry[0 sessions]]]]
+2019-10-28 00:54:36.006 [restartedMain] INFO  o.s.m.s.b.SimpleBrokerMessageHandler - Started.
+2019-10-28 00:54:36.009 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2019-10-28 00:54:36.012 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2019-10-28 00:54:36.013 [restartedMain] INFO  c.e.WebsocketExampleApplication - Started WebsocketExampleApplication in 0.703 seconds (JVM running for 741.721)
+2019-10-28 00:54:36.014 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2019-10-28 00:55:30.871 [Thread-22] INFO  o.s.m.s.b.SimpleBrokerMessageHandler - Stopping...
+2019-10-28 00:55:30.872 [Thread-22] INFO  o.s.m.s.b.SimpleBrokerMessageHandler - BrokerAvailabilityEvent[available=false, SimpleBrokerMessageHandler [DefaultSubscriptionRegistry[cache[0 destination(s)], registry[0 sessions]]]]
+2019-10-28 00:55:30.872 [Thread-22] INFO  o.s.m.s.b.SimpleBrokerMessageHandler - Stopped.
+2019-10-28 00:55:30.873 [Thread-22] INFO  o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'brokerChannelExecutor'
+2019-10-28 00:55:30.873 [Thread-22] INFO  o.s.s.c.ThreadPoolTaskScheduler - Shutting down ExecutorService 'messageBrokerTaskScheduler'
+2019-10-28 00:55:30.873 [Thread-22] INFO  o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'clientOutboundChannelExecutor'
+2019-10-28 00:55:30.873 [Thread-22] INFO  o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'clientInboundChannelExecutor'
+2019-10-28 00:55:32.568 [restartedMain] INFO  c.e.WebsocketExampleApplication - Starting WebsocketExampleApplication on carrey with PID 25584 (C:\development\projects\websocket_example\bin\main started by 조하명 in C:\development\projects\websocket_example)
+2019-10-28 00:55:32.568 [restartedMain] INFO  c.e.WebsocketExampleApplication - No active profile set, falling back to default profiles: default
+2019-10-28 00:55:32.763 [restartedMain] WARN  o.a.tomcat.util.modeler.Registry - The MBean registry cannot be disabled because it has already been initialised
+2019-10-28 00:55:32.812 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2019-10-28 00:55:32.812 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2019-10-28 00:55:32.813 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2019-10-28 00:55:32.813 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.27]
+2019-10-28 00:55:32.844 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2019-10-28 00:55:32.844 [restartedMain] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 273 ms
+2019-10-28 00:55:32.861 [restartedMain] INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'clientInboundChannelExecutor'
+2019-10-28 00:55:32.862 [restartedMain] INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'clientOutboundChannelExecutor'
+2019-10-28 00:55:32.863 [restartedMain] INFO  o.s.s.c.ThreadPoolTaskScheduler - Initializing ExecutorService 'messageBrokerTaskScheduler'
+2019-10-28 00:55:32.866 [restartedMain] INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'brokerChannelExecutor'
+2019-10-28 00:55:32.901 [restartedMain] INFO  o.s.b.a.w.s.WelcomePageHandlerMapping - Adding welcome page: class path resource [static/index.html]
+2019-10-28 00:55:33.064 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2019-10-28 00:55:33.069 [restartedMain] INFO  o.s.m.s.b.SimpleBrokerMessageHandler - Starting...
+2019-10-28 00:55:33.070 [restartedMain] INFO  o.s.m.s.b.SimpleBrokerMessageHandler - BrokerAvailabilityEvent[available=true, SimpleBrokerMessageHandler [DefaultSubscriptionRegistry[cache[0 destination(s)], registry[0 sessions]]]]
+2019-10-28 00:55:33.070 [restartedMain] INFO  o.s.m.s.b.SimpleBrokerMessageHandler - Started.
+2019-10-28 00:55:33.073 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2019-10-28 00:55:33.076 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2019-10-28 00:55:33.076 [restartedMain] INFO  c.e.WebsocketExampleApplication - Started WebsocketExampleApplication in 0.552 seconds (JVM running for 798.785)
+2019-10-28 00:55:33.077 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2019-10-28 00:56:32.867 [MessageBroker-1] INFO  o.s.w.s.c.WebSocketMessageBrokerStats - WebSocketSession[0 current WS(0)-HttpStream(0)-HttpPoll(0), 0 total, 0 closed abnormally (0 connect failure, 0 send limit, 0 transport error)], stompSubProtocol[processed CONNECT(0)-CONNECTED(0)-DISCONNECT(0)], stompBrokerRelay[null], inboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], outboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], sockJsScheduler[pool size = 1, active threads = 1, queued tasks = 0, completed tasks = 0]
+2019-10-28 00:58:40.294 [Thread-27] INFO  o.s.m.s.b.SimpleBrokerMessageHandler - Stopping...
+2019-10-28 00:58:40.295 [Thread-27] INFO  o.s.m.s.b.SimpleBrokerMessageHandler - BrokerAvailabilityEvent[available=false, SimpleBrokerMessageHandler [DefaultSubscriptionRegistry[cache[0 destination(s)], registry[0 sessions]]]]
+2019-10-28 00:58:40.295 [Thread-27] INFO  o.s.m.s.b.SimpleBrokerMessageHandler - Stopped.
+2019-10-28 00:58:40.296 [Thread-27] INFO  o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'brokerChannelExecutor'
+2019-10-28 00:58:40.296 [Thread-27] INFO  o.s.s.c.ThreadPoolTaskScheduler - Shutting down ExecutorService 'messageBrokerTaskScheduler'
+2019-10-28 00:58:40.296 [Thread-27] INFO  o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'clientOutboundChannelExecutor'
+2019-10-28 00:58:40.297 [Thread-27] INFO  o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'clientInboundChannelExecutor'
+2019-10-28 00:58:41.810 [restartedMain] INFO  c.e.WebsocketExampleApplication - Starting WebsocketExampleApplication on carrey with PID 25584 (C:\development\projects\websocket_example\bin\main started by 조하명 in C:\development\projects\websocket_example)
+2019-10-28 00:58:41.810 [restartedMain] INFO  c.e.WebsocketExampleApplication - No active profile set, falling back to default profiles: default
+2019-10-28 00:58:42.013 [restartedMain] WARN  o.a.tomcat.util.modeler.Registry - The MBean registry cannot be disabled because it has already been initialised
+2019-10-28 00:58:42.062 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2019-10-28 00:58:42.062 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2019-10-28 00:58:42.062 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2019-10-28 00:58:42.063 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.27]
+2019-10-28 00:58:42.091 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2019-10-28 00:58:42.091 [restartedMain] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 278 ms
+2019-10-28 00:58:42.105 [restartedMain] INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'clientInboundChannelExecutor'
+2019-10-28 00:58:42.106 [restartedMain] INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'clientOutboundChannelExecutor'
+2019-10-28 00:58:42.107 [restartedMain] INFO  o.s.s.c.ThreadPoolTaskScheduler - Initializing ExecutorService 'messageBrokerTaskScheduler'
+2019-10-28 00:58:42.109 [restartedMain] INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'brokerChannelExecutor'
+2019-10-28 00:58:42.143 [restartedMain] INFO  o.s.b.a.w.s.WelcomePageHandlerMapping - Adding welcome page: class path resource [static/index.html]
+2019-10-28 00:58:42.303 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2019-10-28 00:58:42.308 [restartedMain] INFO  o.s.m.s.b.SimpleBrokerMessageHandler - Starting...
+2019-10-28 00:58:42.309 [restartedMain] INFO  o.s.m.s.b.SimpleBrokerMessageHandler - BrokerAvailabilityEvent[available=true, SimpleBrokerMessageHandler [DefaultSubscriptionRegistry[cache[0 destination(s)], registry[0 sessions]]]]
+2019-10-28 00:58:42.309 [restartedMain] INFO  o.s.m.s.b.SimpleBrokerMessageHandler - Started.
+2019-10-28 00:58:42.312 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2019-10-28 00:58:42.315 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2019-10-28 00:58:42.316 [restartedMain] INFO  c.e.WebsocketExampleApplication - Started WebsocketExampleApplication in 0.55 seconds (JVM running for 988.024)
+2019-10-28 00:58:42.317 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2019-10-28 00:58:49.782 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-10-28 00:58:49.787 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2019-10-28 00:58:49.793 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 6 ms
+2019-10-28 00:59:42.111 [MessageBroker-1] INFO  o.s.w.s.c.WebSocketMessageBrokerStats - WebSocketSession[0 current WS(0)-HttpStream(0)-HttpPoll(0), 0 total, 0 closed abnormally (0 connect failure, 0 send limit, 0 transport error)], stompSubProtocol[processed CONNECT(0)-CONNECTED(0)-DISCONNECT(0)], stompBrokerRelay[null], inboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], outboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], sockJsScheduler[pool size = 1, active threads = 1, queued tasks = 0, completed tasks = 0]
+2019-10-28 01:06:53.323 [Thread-32] INFO  o.s.m.s.b.SimpleBrokerMessageHandler - Stopping...
+2019-10-28 01:06:53.324 [Thread-32] INFO  o.s.m.s.b.SimpleBrokerMessageHandler - BrokerAvailabilityEvent[available=false, SimpleBrokerMessageHandler [DefaultSubscriptionRegistry[cache[0 destination(s)], registry[0 sessions]]]]
+2019-10-28 01:06:53.324 [Thread-32] INFO  o.s.m.s.b.SimpleBrokerMessageHandler - Stopped.
+2019-10-28 01:06:53.325 [Thread-32] INFO  o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'brokerChannelExecutor'
+2019-10-28 01:06:53.325 [Thread-32] INFO  o.s.s.c.ThreadPoolTaskScheduler - Shutting down ExecutorService 'messageBrokerTaskScheduler'
+2019-10-28 01:06:53.325 [Thread-32] INFO  o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'clientOutboundChannelExecutor'
+2019-10-28 01:06:53.326 [Thread-32] INFO  o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'clientInboundChannelExecutor'
+2019-10-28 01:06:54.774 [restartedMain] INFO  c.e.WebsocketExampleApplication - Starting WebsocketExampleApplication on carrey with PID 25584 (C:\development\projects\websocket_example\bin\main started by 조하명 in C:\development\projects\websocket_example)
+2019-10-28 01:06:54.775 [restartedMain] INFO  c.e.WebsocketExampleApplication - No active profile set, falling back to default profiles: default
+2019-10-28 01:06:55.032 [restartedMain] WARN  o.a.tomcat.util.modeler.Registry - The MBean registry cannot be disabled because it has already been initialised
+2019-10-28 01:06:55.095 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2019-10-28 01:06:55.095 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2019-10-28 01:06:55.096 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2019-10-28 01:06:55.096 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.27]
+2019-10-28 01:06:55.130 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2019-10-28 01:06:55.130 [restartedMain] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 353 ms
+2019-10-28 01:06:55.150 [restartedMain] INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'clientInboundChannelExecutor'
+2019-10-28 01:06:55.151 [restartedMain] INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'clientOutboundChannelExecutor'
+2019-10-28 01:06:55.151 [restartedMain] INFO  o.s.s.c.ThreadPoolTaskScheduler - Initializing ExecutorService 'messageBrokerTaskScheduler'
+2019-10-28 01:06:55.154 [restartedMain] INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'brokerChannelExecutor'
+2019-10-28 01:06:55.184 [restartedMain] INFO  o.s.b.a.w.s.WelcomePageHandlerMapping - Adding welcome page: class path resource [static/index.html]
+2019-10-28 01:06:55.344 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2019-10-28 01:06:55.349 [restartedMain] INFO  o.s.m.s.b.SimpleBrokerMessageHandler - Starting...
+2019-10-28 01:06:55.349 [restartedMain] INFO  o.s.m.s.b.SimpleBrokerMessageHandler - BrokerAvailabilityEvent[available=true, SimpleBrokerMessageHandler [DefaultSubscriptionRegistry[cache[0 destination(s)], registry[0 sessions]]]]
+2019-10-28 01:06:55.349 [restartedMain] INFO  o.s.m.s.b.SimpleBrokerMessageHandler - Started.
+2019-10-28 01:06:55.352 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2019-10-28 01:06:55.354 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2019-10-28 01:06:55.354 [restartedMain] INFO  c.e.WebsocketExampleApplication - Started WebsocketExampleApplication in 0.619 seconds (JVM running for 1481.063)
+2019-10-28 01:06:55.355 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2019-10-28 01:06:58.796 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-10-28 01:06:58.798 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2019-10-28 01:06:58.801 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 3 ms
+2019-10-28 01:07:55.153 [MessageBroker-4] INFO  o.s.w.s.c.WebSocketMessageBrokerStats - WebSocketSession[4 current WS(4)-HttpStream(0)-HttpPoll(0), 4 total, 0 closed abnormally (0 connect failure, 0 send limit, 0 transport error)], stompSubProtocol[processed CONNECT(4)-CONNECTED(4)-DISCONNECT(0)], stompBrokerRelay[null], inboundChannel[pool size = 16, active threads = 0, queued tasks = 0, completed tasks = 30], outboundChannel[pool size = 12, active threads = 0, queued tasks = 0, completed tasks = 12], sockJsScheduler[pool size = 8, active threads = 1, queued tasks = 5, completed tasks = 15]
