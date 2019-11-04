@@ -13,7 +13,7 @@ public class Service {
 	@Autowired
 	private SimpMessagingTemplate smt;
 	
-	public void test() {
-		smt.convertAndSend("/topic/chat", new Chat("test","test"));
+	public void test(String message) {
+		smt.convertAndSend("/topic/push", new Push(message));
 	}
 }
