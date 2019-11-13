@@ -22,8 +22,10 @@ function connect() {
 //            showGreeting(JSON.parse(greeting.body).content);
 //        });
         stompClient.subscribe('/topic/chat', function (chat) {
-        	alert();
         	showChat(JSON.parse(chat.body));
+        });
+        stompClient.subscribe('/topic/push', function (push) {
+        	alert("행정안전부로 부터 번역 요청이 들어왔습니다.");
         });
     });
 }
