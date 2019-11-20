@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>랜덤 채팅 환영합니다.</title>
+<link rel="stylesheet" type="text/css" th:href="@{/static/css/main.css}">
+<script th:src="@{/webjars/jquery/jquery.min.js}"></script>
+<script th:src="@{/static/js/main.js}"></script>
+</head>
+<body>
+<div class="wrapper fadeInDown">
+  <div id="loginContent">
+   <!-- Tabs Titles -->
+    <h2 class="inactive underlineHover" id="signIn"> Sign In </h2>
+    <h2 class="active" id="signUp">Sign Up </h2>
+    <div class="fadeIn first">
+    </div>
+    <form>
+      <input type="text" id="login" class="fadeIn second" name="login" placeholder="아이디">
+      <input type="password" id="password" class="fadeIn third" name="login" placeholder="패스워드">
+      <input type="submit" class="fadeIn submitButton" value="완료">
+    </form>
+  </div>
+</div>
+</body>
+</html>
