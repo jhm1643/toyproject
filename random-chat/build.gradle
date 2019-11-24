@@ -34,12 +34,11 @@ dependencies {
 	testImplementation('org.springframework.boot:spring-boot-starter-test') {
 		exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
 	}
-	// https://mvnrepository.com/artifact/org.webjars/jquery
+	compile("org.webjars:sockjs-client:1.0.2")
+    compile("org.webjars:stomp-websocket:2.3.3")
 	compile group: 'org.webjars', name: 'jquery', version: '3.4.1'
-	// https://mvnrepository.com/artifact/org.webjars/webjars-locator-core
 	compile group: 'org.webjars', name: 'webjars-locator-core', version: '0.42'
-	// https://mvnrepository.com/artifact/com.h2database/h2
-	testCompile group: 'com.h2database', name: 'h2', version: '1.4.200'
+	runtimeOnly 'com.h2database:h2'
 }
 
 test {

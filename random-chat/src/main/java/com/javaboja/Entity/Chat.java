@@ -1,5 +1,7 @@
 package com.javaboja.Entity;
 
+import java.sql.Timestamp;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -18,4 +20,5 @@ public class Chat {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private long chatId;
+	private Timestamp date;
 }

@@ -21,8 +21,8 @@ public class User {
 	private String userId;
 	private String userPassword;
 	
-	@OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
-	private List<Message> messages;
+//	@OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
+//	private List<Message> messages;
 	
 	
 }

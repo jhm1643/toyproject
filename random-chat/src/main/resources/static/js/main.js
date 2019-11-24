@@ -1,63 +1,71 @@
 $(document).ready(function(){
+	
 	//회원가입 페이지
 	$(document).on('click', '#signUp', function(e) {
-		var html=
-			'<div class="wrapper fadeInDown">'+
-				'<div id="loginContent">'+
-					"<h2 class='inactive underlineHover' id='signIn'> Sign In </h2>"+
-					"<h2 class='active' id='signUp'>Sign Up </h2>"+
-					"<form id='regiForm'>"+
-						"<input type='text' id='login' class='fadeIn second' name='login' placeholder='아이디'>"+
-						"<input type='password' id='password' class='fadeIn third' name='login' placeholder='패스워드'>"+
-						"<input type='button' class='fadeIn second submitButton' id='regi' value='완료'>"+
-					"</form>"+
-				"</div>"+
-			"</div>"
-		$("body").html(html);
+		$("body").html(signUpPage);
 	});
 	
 	//회원가입 제출
 	$(document).on('click', '#regi', function(e) {
-		
+		$.post("/regi",
+				{
+					userId:$("#userId").val(),
+					userPassword:$("#userPass").val()
+				},
+			function(data){
+					if(data.code==200){
+						alert("등록이 완료 되었습니다.");
+						$("body").html(loginPage);
+					}else if(data.code==201){
+						alert("이미 등록된 아아디 입니다.");
+					}
+			}).fail(function(jqXHR){
+				alert("회원 가입 실패 [code : "+jqXHR.code+" ]");
+			});
 	});
 	
 	//로그인 페이지
 	$(document).on('click', '#signIn', function(e) {
-		var html=
-			'<div class="wrapper fadeInDown">'+
-				'<div id="loginContent">'+
-					'<h2 class="active" id="signIn"> Sign In </h2>'+
-					'<h2 class="inactive underlineHover" id="signUp">Sign Up </h2>'+
-						'<div class="fadeIn first">랜덤 채팅에 오신 것을 환영합니다.'+
-						'</div>'+
-					'<form id="loginForm">'+
-					'<input type="text" id="login" class="fadeIn second" name="login" placeholder="아이디">'+
-					'<input type="password" id="password" class="fadeIn third" name="login" placeholder="패스워드">'+
-					'<input type="button" class="fadeIn second submitButton" id="login" value="로그인">'+
-					'</form>'+
-				"</div>"+
-			'</div>'
-		$("body").html(html);
+		$("body").html(loginPage);
 	});
 	
 	//로그인 시도 후 메인페이지
 	$(document).on('click', '#login', function(e) {
-		//$.get();
-		var html=
-			'<div class="wrapper fadeInDown">'+
-				'<div id="mainContent">'+
-					'<div id="welcomeArea">안녕하세요. OO님'+
-						'<input type="button" id="ranChatStart" value="랜덤채팅시작">'+
-					'</div>'+
-					'<div id="friendListArea">'+
-					'</div>'+
-					'<div id="chatArea">'+
-						'<textarea></textarea>'+
-						'<input type="button" id="messageSend" value="전송">'+
-					'</div>'+
-				"</div>"+
-			'</div>'
-		$("body").html(html);
+		var userId = $("#userId").val()
+		$.post("/main",
+				{
+					userId : userId,
+					userPassword : $("#userPassword").val()
+				},
+				function(data){
+					if(data.code==200){
+						$("body").html(mainPage(userId));
+					}else if(data.code==202){
+						alert("아이디 또는 패스워드가 잘못되었습니다.");
+					}else if(data.code==203){
+					}
+				}).fail(function(jqXHR){
+					alert("로그인 실패 [code : "+jqXHR+" ]");
+				})
+	});
+	
+	//랜덤채팅 시작
+	$(document).on('click', '#ranChatStart', function(e) {
+		var socket = new SockJS('/random-chat-start');
+	    stompClient = Stomp.over(socket);
+	    stompClient.connect({}, function (frame) {
+	        setConnected(true);
+	        console.log('Connected: ' + frame);
+//	        stompClient.subscribe('/topic/greetings', function (greeting) {
+//	            showGreeting(JSON.parse(greeting.body).content);
+//	        });
+	        stompClient.subscribe('/topic/chat', function (chat) {
+	        	showChat(JSON.parse(chat.body));
+	        });
+	        stompClient.subscribe('/topic/push', function (push) {
+	        	alert("행정안전부로 부터 번역 요청이 들어왔습니다.");
+	        });
+	    });
 	});
 })
 
