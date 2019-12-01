@@ -18,7 +18,7 @@ import lombok.Setter;
 public class Chat {
 
 	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
-	private long chatId;
-	private Timestamp date;
+	private String chatId;
+	private String userId1;
+	private String userId2;
 }

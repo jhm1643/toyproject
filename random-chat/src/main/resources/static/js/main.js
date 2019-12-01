@@ -30,8 +30,9 @@ $(document).ready(function(){
 	});
 	
 	//로그인 시도 후 메인페이지
+	var userId = "";
 	$(document).on('click', '#login', function(e) {
-		var userId = $("#userId").val()
+		userId = $("#userId").val()
 		$.post("/main",
 				{
 					userId : userId,
@@ -50,7 +51,13 @@ $(document).ready(function(){
 	});
 	
 	//랜덤채팅 시작
+	var roomId = "";
 	$(document).on('click', '#ranChatStart', function(e) {
+		alert(userId);
+		$.get("/ran-chat-start",{userId:userId},
+				function(data){
+					roomId=data;
+				});
 		var socket = new SockJS('/random-chat-start');
 	    stompClient = Stomp.over(socket);
 	    stompClient.connect({}, function (frame) {
@@ -61,9 +68,6 @@ $(document).ready(function(){
 //	        });
 	        stompClient.subscribe('/topic/chat', function (chat) {
 	        	showChat(JSON.parse(chat.body));
-	        });
-	        stompClient.subscribe('/topic/push', function (push) {
-	        	alert("행정안전부로 부터 번역 요청이 들어왔습니다.");
 	        });
 	    });
 	});
