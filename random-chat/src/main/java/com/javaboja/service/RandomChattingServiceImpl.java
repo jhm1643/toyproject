@@ -13,7 +13,9 @@ import org.springframework.stereotype.Service;
 import org.springframework.web.context.request.async.DeferredResult;
 
 import com.javaboja.Entity.Chat;
+import com.javaboja.Entity.Message;
 import com.javaboja.repo.ChatRepo;
+import com.javaboja.repo.MessageRepo;
 
 import lombok.extern.slf4j.Slf4j;
 
@@ -23,7 +25,9 @@ public class RandomChattingServiceImpl implements RandomChattingService {
  
 	@Autowired
 	private ChatRepo chatRepo;
-
+	@Autowired
+	private MessageRepo messageRepo;
+	
 	@Override
 	public String getChattingRoomIdService(String userId) {
 		// TODO Auto-generated method stub
@@ -41,20 +45,13 @@ public class RandomChattingServiceImpl implements RandomChattingService {
 			chatRepo.save(chat);
 			return chat.getChatId();
 		}
-//		while(true) {
-//			if(WATTING_USER_QUEUE.size()>1) {
-//				Chat chat = new Chat();
-//				chat.setChatId(UUID.randomUUID().toString());
-//				DeferredResult<Chat> result = new DeferredResult<>();
-//				result.setResult(chat);
-//				return result;
-//			}
-//			try {
-//				Thread.sleep(5000);
-//			}catch(Exception e) {
-//				e.printStackTrace();
-//			}
-//		}
+
+	}
+
+	@Override
+	public void messageSaveService(Message message) {
+		// TODO Auto-generated method stub
+		messageRepo.save(message);
 	}
 
 	

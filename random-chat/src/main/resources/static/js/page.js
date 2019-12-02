@@ -30,6 +30,7 @@
 		'<div id="mainContent">'+
 			'<div id="welcomeArea">안녕하세요. '+userId+'님'+
 				'<input type="button" id="ranChatStart" value="랜덤채팅시작">'+
+				'<input type="button" id="friendAdd" value="친구추가">'+
 			'</div>'+
 			'<div id="friendListArea">'+
 			'</div>'+

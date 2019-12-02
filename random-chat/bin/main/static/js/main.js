@@ -72,22 +72,27 @@ $(document).ready(function(){
 		$("#chatAreaFooter").val("");
 	}
 	
+	var randomChatSuccess = function(userId, message) {
+		stompClient.send("/app/chat/"+roomId, {}, JSON.stringify({'userId': userId, 'message': message}));
+		$("#chatAreaFooter").val("");
+	}
+	
 	var showChat = function (chat) {
 			$("#chatAreaBody").append("<div class='div_msg_send'>" + chat.userId + " : " + chat.message + "</div>");
 	}
+	
 	$(document).on("keydown","#chatAreaFooter",function(key){
 		if(key.keyCode == 13){
 			if(!event.shiftKey){
 				event.preventDefault();
 				sendChat(userId, $("#chatAreaFooter").val())
-				
 			}
-			
 		}
-		
-		
-	})
+	});
 	
+	var friendAdd = function(){
+		
+	}
 })
 
 	
