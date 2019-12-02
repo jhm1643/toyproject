@@ -1,5 +1,5 @@
 $(document).ready(function(){
-	
+	var setConnected = false;
 	//회원가입 페이지
 	$(document).on('click', '#signUp', function(e) {
 		$("body").html(signUpPage);
@@ -53,7 +53,6 @@ $(document).ready(function(){
 	//랜덤채팅 시작
 	var roomId = "";
 	$(document).on('click', '#ranChatStart', function(e) {
-		alert(userId);
 		$.get("/ran-chat-start",{userId:userId},
 				function(data){
 					roomId=data;
@@ -61,16 +60,34 @@ $(document).ready(function(){
 		var socket = new SockJS('/random-chat-start');
 	    stompClient = Stomp.over(socket);
 	    stompClient.connect({}, function (frame) {
-	        setConnected(true);
-	        console.log('Connected: ' + frame);
-//	        stompClient.subscribe('/topic/greetings', function (greeting) {
-//	            showGreeting(JSON.parse(greeting.body).content);
-//	        });
-	        stompClient.subscribe('/topic/chat', function (chat) {
+	    	setConnected = true;
+	        stompClient.subscribe('/topic/chat/'+roomId, function (chat) {
 	        	showChat(JSON.parse(chat.body));
 	        });
 	    });
 	});
+	
+	var sendChat = function(userId, message) {
+		stompClient.send("/app/chat/"+roomId, {}, JSON.stringify({'userId': userId, 'message': message}));
+		$("#chatAreaFooter").val("");
+	}
+	
+	var showChat = function (chat) {
+			$("#chatAreaBody").append("<div class='div_msg_send'>" + chat.userId + " : " + chat.message + "</div>");
+	}
+	$(document).on("keydown","#chatAreaFooter",function(key){
+		if(key.keyCode == 13){
+			if(!event.shiftKey){
+				event.preventDefault();
+				sendChat(userId, $("#chatAreaFooter").val())
+				
+			}
+			
+		}
+		
+		
+	})
+	
 })
 
 	

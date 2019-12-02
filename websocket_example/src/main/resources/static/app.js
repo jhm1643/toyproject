@@ -13,23 +13,28 @@ function setConnected(connected) {
 }
 
 function connect() {
-    var socket = new SockJS('/gs-guide-websocket');
+    //var socket = new SockJS('/gs-guide-websocket');
+    var socket = new SockJS('/safekorea-trans-push');
     stompClient = Stomp.over(socket);
     stompClient.connect({}, function (frame) {
-        setConnected(true);
-        console.log('Connected: ' + frame);
+//        setConnected(true);
+//        console.log('Connected: ' + frame);
 //        stompClient.subscribe('/topic/greetings', function (greeting) {
 //            showGreeting(JSON.parse(greeting.body).content);
 //        });
-        stompClient.subscribe('/topic/chat', function (chat) {
-        	showChat(JSON.parse(chat.body));
-        });
-        stompClient.subscribe('/topic/push', function (push) {
+//        stompClient.subscribe('/topic/chat', function (chat) {
+//        	showChat(JSON.parse(chat.body));
+//        });
+        stompClient.subscribe('/visitKorea/push', function (push) {
+        	//document.title = "[user] hello world";
         	alert("행정안전부로 부터 번역 요청이 들어왔습니다.");
         });
     });
 }
-
+function blink() {
+	 if(window.blinkOn) { window.title = "New Message!"; window.blinkOn = false; }
+	 else { window.title = "Normal Title"; window.blinkOn = true; }
+	}
 function disconnect() {
     if (stompClient !== null) {
         stompClient.disconnect();

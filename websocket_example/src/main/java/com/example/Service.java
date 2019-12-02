@@ -14,6 +14,7 @@ public class Service {
 	private SimpMessagingTemplate smt;
 	
 	public void test(String message) {
-		smt.convertAndSend("/topic/push", new Push(message));
+		//smt.send("/topic/push", null);
+		smt.convertAndSend("/visitKorea/push", "");
 	}
 }

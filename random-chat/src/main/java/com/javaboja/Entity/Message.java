@@ -24,5 +24,5 @@ public class Message {
 	private long chatId;
 	private String userId;
 	private String message;
-	private Timestamp date;
+	//private Timestamp date;
 }

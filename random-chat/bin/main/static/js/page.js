@@ -34,7 +34,8 @@
 			'<div id="friendListArea">'+
 			'</div>'+
 			'<div id="chatArea">'+
-				'<textarea></textarea>'+
+				'<div id="chatAreaBody"></div>'+
+				'<textarea id="chatAreaFooter"></textarea>'+
 				'<input type="button" id="messageSend" value="전송">'+
 			'</div>'+
 		"</div>"+

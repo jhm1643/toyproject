@@ -39,4 +39,11 @@ public class GreetingController {
 		service.test(message);
 		return "push";
 	}
+	
+	@RequestMapping("/test2")
+	@ResponseBody
+	@SendTo("/topic/push")
+	public void test2() throws Exception{
+		log.info("carrey");
+	}
 }
