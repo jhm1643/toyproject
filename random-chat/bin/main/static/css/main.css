@@ -76,7 +76,7 @@ h2 {
 	position : absolute;
 	border : 1px solid red;
 	width : 200px;
-	height : 50px;
+	height : 80px;
 }
 #ranChatStart{
 	
@@ -86,8 +86,8 @@ h2 {
 	position : absolute;
 	border : 1px solid blue;
 	width : 200px;
-	height : 530px;
-	top: 100px;
+	height : 500px;
+	top: 130px;
 }
 #chatArea{
 	position : absolute;

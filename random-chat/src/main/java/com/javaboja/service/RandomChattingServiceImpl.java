@@ -8,6 +8,7 @@ import java.util.Queue;
 import java.util.UUID;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.messaging.simp.SimpMessagingTemplate;
 import org.springframework.scheduling.annotation.Async;
 import org.springframework.stereotype.Service;
 import org.springframework.web.context.request.async.DeferredResult;
@@ -27,9 +28,10 @@ public class RandomChattingServiceImpl implements RandomChattingService {
 	private ChatRepo chatRepo;
 	@Autowired
 	private MessageRepo messageRepo;
-	
+	@Autowired
+	private SimpMessagingTemplate smt;
 	@Override
-	public String getChattingRoomIdService(String userId) {
+	public Chat getChattingRoomIdService(String userId) {
 		// TODO Auto-generated method stub
 		Chat chat = new Chat();
 		String chatId = UUID.randomUUID().toString();
@@ -38,12 +40,13 @@ public class RandomChattingServiceImpl implements RandomChattingService {
 			chat = findByUserId2IsNull.get(0);
 			chat.setUserId2(userId);
 			chatRepo.save(chat);
-			return chat.getChatId();
+			smt.convertAndSend("/topic/hello/"+chat.getChatId(), chat);
+			return chat;
 		}else{
 			chat.setChatId(chatId);
 			chat.setUserId1(userId);
 			chatRepo.save(chat);
-			return chat.getChatId();
+			return chat;
 		}
 
 	}
@@ -52,6 +55,18 @@ public class RandomChattingServiceImpl implements RandomChattingService {
 	public void messageSaveService(Message message) {
 		// TODO Auto-generated method stub
 		messageRepo.save(message);
+	}
+
+	@Override
+	public List<Message> chattingReopenService(String chatId) {
+		// TODO Auto-generated method stub
+		return messageRepo.findByChatId(chatId);
+	}
+
+	@Override
+	public void chattingOutService() {
+		// TODO Auto-generated method stub
+		
 	}
 
 	

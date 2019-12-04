@@ -25,14 +25,23 @@
 						"</div>"+
 					'</div>';
 	
-	var mainPage = function(userId){
+	var mainPage = function(mainObject ){
+		console.warn(mainObject.friendsList);
+		var friendsList ="";
+		for(var i=0;i<mainObject.friendsList.length;i++){
+			var friendObject = mainObject.friendsList[i];
+			friendsList+="<div ondblclick='goToFriendsChat(\""+friendObject.chatId+"\");'>"+friendObject.friendsId+"</div>";
+		}
 		var html = '<div class="wrapper fadeInDown">'+
 		'<div id="mainContent">'+
-			'<div id="welcomeArea">안녕하세요. '+userId+'님'+
+			'<div id="welcomeArea">안녕하세요. '+mainObject.userId+'님'+
 				'<input type="button" id="ranChatStart" value="랜덤채팅시작">'+
 				'<input type="button" id="friendAdd" value="친구추가">'+
+				'<input type="button" id="chatOut" value="채팅방 나가기">'+
+				'<input type="button" id="logOut" value="로그아웃">'+
 			'</div>'+
-			'<div id="friendListArea">'+
+			'<div id="friendListArea">친구 목록'+
+			friendsList+
 			'</div>'+
 			'<div id="chatArea">'+
 				'<div id="chatAreaBody"></div>'+

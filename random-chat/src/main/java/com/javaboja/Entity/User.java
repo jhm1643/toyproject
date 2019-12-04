@@ -20,7 +20,7 @@ public class User {
 	@Id
 	private String userId;
 	private String userPassword;
-	
+	private String loginYN;
 //	@OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
 //	private List<Message> messages;
 	
