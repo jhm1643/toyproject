@@ -1,5 +1,7 @@
 package net.class101.server1;
 
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -36,26 +38,40 @@ public class Main extends Thread{
 		PRODUCT_MAP.put(product.getProduct_no(), product);
 	}
 	
-	public static void main(String[] args) {
-		tableSet();
-		Scanner sc = new Scanner(System.in);
-		System.out.print("입력(o[order]: 주문, q[quit]: 종료) : ");
-		String input_value = sc.next();
-		if(input_value.equals("q")) {
-			System.out.println("고객님의 주문 감사합니다.");
-		}else if(input_value.equals("o")) {
-			System.out.println("상품번호\t\t\t\t\t\t상품명\t\t\t판매가격\t\t\t재고수");
-			for(int key:PRODUCT_MAP.keySet()) {
-				System.out.print(PRODUCT_MAP.get(key).getProduct_no()+"\t\t");
-				System.out.print(PRODUCT_MAP.get(key).getName()+"\t\t\t");
-				System.out.print(PRODUCT_MAP.get(key).getSalePrice()+"\t\t\t");
-				System.out.print(PRODUCT_MAP.get(key).getStockCount()+"\t\t\t\n");
-			}
-			System.out.print("상품번호 : ");
-			PRODUCT_MAP.get(Integer.parseInt(sc.next()));
-			System.out.print("수량 : ");
-			int count = Integer.parseInt(sc.next());
+	public static void productListPrint() {
+		System.out.println("상품번호\t\t\t\t\t\t상품명\t\t\t판매가격\t\t\t재고수");
+		for(int key:PRODUCT_MAP.keySet()) {
+			System.out.print(PRODUCT_MAP.get(key).getProduct_no()+"\t\t");
+			System.out.print(PRODUCT_MAP.get(key).getName()+"\t\t\t");
+			System.out.print(PRODUCT_MAP.get(key).getSalePrice()+"\t\t\t");
+			System.out.print(PRODUCT_MAP.get(key).getStockCount()+"\t\t\t\n");
 		}
+	}
+	
+	public static void main(String[] args) throws Exception{
+		tableSet();
+		BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
+		while(true) {
+			System.out.print("입력(o[order]: 주문, q[quit]: 종료) : ");
+			String order_value = in.readLine();
+			if(order_value.equals("q")) {
+				System.out.println("고객님의 주문 감사합니다.");
+				System.exit(0);
+			}else if(order_value.equals("o")) {
+				productListPrint();
+				while(true) {
+					System.out.print("상품번호 : ");
+					String product_no = in.readLine();
+					if(product_no.equals(" ")) {
+						break;
+					}
+					PRODUCT_MAP.get(Integer.parseInt(product_no));
+					System.out.print("수량 : ");
+					int count = Integer.parseInt(in.readLine());
+				}
+			}
+		}
+		
 	}
 	
 	
