@@ -1,46 +1,13 @@
-package net.class101.server1;
+package net.class101.server1.dataStore;
 
 import java.util.HashMap;
 import java.util.Map;
 
-public class Product {
+import net.class101.server1.model.Product;
 
-	public static Map<Integer, Product> PRODUCT_TABLE=new HashMap<>();
-	
-	private int product_no;
-	private String type;
-	private String name;
-	private int salePrice;
-	private int stockCount;
-
-	public Product() {}
-	public Product(int product_no, String type, String name, int salePrice, int stockCount) {
-		this.product_no=product_no;
-		this.type=type;
-		this.name=name;
-		this.salePrice=salePrice;
-		this.stockCount=stockCount;
-	}
-	public int getProduct_no() {
-		return product_no;
-	}
-	public String getType() {
-		return type;
-	}
-	public String getName() {
-		return name;
-	}
-	public int getSalePrice() {
-		return salePrice;
-	}
-	public int getStockCount() {
-		return stockCount;
-	}
-	public void setStockCount(int stockCount) {
-		this.stockCount=stockCount;
-	}
-	
-	public void productListSet() {
+public class DataStore {
+	public static Map<Integer, Product> PRODUCT_TABLE = new HashMap<>();
+	public void setProductTable() {
 		mapSet(new Product(16374, "클래스", "스마트스토어로 월 100만원 만들기, 평범한 사람이 돈을 만드는 비법", 151950, 99999));
 		mapSet(new Product(26825, "클래스", "해금, 특별하고 아름다운 나만의 반려악기", 114500, 99999));
 		mapSet(new Product(65625, "클래스", "일상에 따뜻한 숨결을 불어넣어요, 반지수와 함께하는 아이패드 드로잉", 174500, 99999));
@@ -62,8 +29,12 @@ public class Product {
 		mapSet(new Product(74218, "클래스", "나만의 문방구를 차려요! 그리지영의 타블렛으로 굿즈 만들기 ", 191600, 99999));
 		mapSet(new Product(28448, "클래스", "당신도 할 수 있다! 베테랑 실무자가 알려주는 모션그래픽의 모든 것", 152200, 99999));
 	}
-	public void productListShow() {
-		productListSet();
+	
+	public void mapSet(Product product) {
+		PRODUCT_TABLE.put(product.getProduct_no(), product);
+	}
+	
+	public void showProductTable() {
 		System.out.println("상품번호\t\t\t\t\t\t상품명\t\t\t판매가격\t\t\t재고수");
 		for(int key:PRODUCT_TABLE.keySet()) {
 			System.out.print(PRODUCT_TABLE.get(key).getProduct_no()+"\t\t");
@@ -73,7 +44,4 @@ public class Product {
 		}
 	}
 	
-	public void mapSet(Product product) {
-		PRODUCT_TABLE.put(product.getProduct_no(), product);
-	}
 }

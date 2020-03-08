@@ -1,46 +1,41 @@
 package net.class101.server1;
 
-import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.assertEquals;
 
+import org.junit.Before;
 import org.junit.Test;
 
+import net.class101.server1.dataStore.DataStore;
+import net.class101.server1.model.Cart;
+import net.class101.server1.service.OrderService;
+
 public class OrderTest {
+
+	@Before
+	public void cartBefore() {
+		DataStore productDataStore = new DataStore();
+		productDataStore.setProductTable();
+		productDataStore.showProductTable();
+	}
 	
 	@Test
-	public void test() throws SoldOutException{
-		Product product = new Product();
-		product.productListSet();
+	public void orderTest() throws Exception{
+		OrderService order = new OrderService();
 		
-		new Thread (() ->{
-			System.out.println(1);
-			Order order = new Order();
-			order.cartAdd(42031, 1);
-			try {
-				order.paymentGo();
-			}catch(SoldOutException e) {
-				e.printStackTrace();
-			}
-		}).run();
+		//50000원 이하 결제 시 배송비 5000원 추가 확인
+		Cart cart1 = new Cart();
+		cart1.setCart(58395, 1);
+		order.paymentGo(cart1);
 		
-		new Thread (() ->{
-			System.out.println(2);
-			Order order = new Order();
-			order.cartAdd(42031, 1);
-			try {
-				order.paymentGo();
-			}catch(SoldOutException e) {
-				e.printStackTrace();
-			}
-		}).run();
-		new Thread (() ->{
-			System.out.println(3);
-			Order order = new Order();
-			order.cartAdd(42031, 1);
-			try {
-				order.paymentGo();
-			}catch(SoldOutException e) {
-				e.printStackTrace();
-			}
-		}).run();
+		//50000원 이상 결제 시 배송비 추가 안됨
+		Cart cart2 = new Cart();
+		cart2.setCart(58395, 3);
+		order.paymentGo(cart2);
+		
+		//클래스, 키트 동시 구매 시 결제 확인
+		Cart cart3 = new Cart();
+		cart3.setCart(58395, 3);
+		cart3.setCart(78311, 1);
+		order.paymentGo(cart3);
 	}
 }
